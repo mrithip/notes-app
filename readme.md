@@ -1,6 +1,6 @@
 # Notes App
 
-[![E2E Pipeline](https://github.com/bunnyblack/notesapp/actions/workflows/pipeline.yml/badge.svg)](https://github.com/bunnyblack/notesapp/actions/workflows/pipeline.yml)
+[![E2E Pipeline](https://github.com/mrithip/notes-app/actions/workflows/pipeline.yml/badge.svg)](https://github.com/mrithip/notes-app/actions/workflows/pipeline.yml)
 
 A **full-stack Notes App** built with **React** + **Django REST Framework**, using **JWT Authentication**.  
 Users can sign up, log in, add, and delete notes. The admin panel allows managing users and notes.  
