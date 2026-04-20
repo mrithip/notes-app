@@ -1,25 +1,25 @@
-# 📝 Notes App
+# Notes App
 
 A **full-stack Notes App** built with **React** + **Django REST Framework**, using **JWT Authentication**.  
 Users can sign up, log in, add, and delete notes. The admin panel allows managing users and notes.  
 
 ---
 
-## 🚀 Features
+## Features
 
-- 🔐 **JWT Authentication** (access & refresh tokens)
-- 👤 **Custom User model** in Django
-- 📝 **Notes CRUD**:  
+- **JWT Authentication** (access & refresh tokens)
+- **Custom User model** in Django
+- **Notes CRUD**:  
   - Add a note  
   - Delete a note  
   - View all notes
-- 🖥️ **Admin Panel** for user & note management
-- ⚡ Responsive React frontend with **TailwindCSS**
-- 💾 **SQLite3** database
+- **Admin Panel** for user & note management
+-  Responsive React frontend with **TailwindCSS**
+- **SQLite3** database
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - **Frontend:** React, React Router, Axios, TailwindCSS  
 - **Backend:** Django, Django REST Framework  
@@ -29,7 +29,7 @@ Users can sign up, log in, add, and delete notes. The admin panel allows managin
 
 ---
 
-## 💻 Installation
+## Installation
 
 ### Backend (Django)
 
@@ -91,23 +91,23 @@ Users can sign up, log in, add, and delete notes. The admin panel allows managin
 ## ⚡ Usage
 
 1. Open `http://localhost:5173` in your browser.  
-2. Sign up as a new user 📝  
-3. Log in 🔐  
+2. Sign up as a new user 
+3. Log in 
 4. Access your notes dashboard:  
-   - Add new notes ➕  
-   - Delete notes ❌  
-5. Admin can manage all users and notes at `http://127.0.0.1:8000/admin/` 👑
+   - Add new notes   
+   - Delete notes   
+5. Admin can manage all users and notes at `http://127.0.0.1:8000/admin/` 
 
 ---
 
-## 💡 Notes
+## Notes
 
-- All API requests are protected with **JWT tokens** 🔑  
+- All API requests are protected with **JWT tokens** 
 - Frontend stores **access** & **refresh tokens** in `localStorage`  
-- Axios interceptors automatically refresh tokens if expired 🔄  
+- Axios interceptors automatically refresh tokens if expired   
 
 ---
 
-## 📝 License
+## License
 
 This project is licensed under the MIT License.
