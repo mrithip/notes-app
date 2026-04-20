@@ -111,3 +111,32 @@ Users can sign up, log in, add, and delete notes. The admin panel allows managin
 ## License
 
 This project is licensed under the MIT License.
+
+---
+
+## Testing
+
+To run the Playwright E2E tests locally:
+
+1. Create and activate the virtual environment (if not already done):
+    ```bash
+    python3 -m venv .venv
+    source .venv/bin/activate
+    ```
+
+2. Install all development dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3. Install Playwright browsers:
+    ```bash
+    playwright install
+    ```
+
+4. Make sure both the backend and frontend are running on localhost:8000 and localhost:5173, respectively.
+
+5. Run the tests:
+    ```bash
+    pytest tests/
+    ```
