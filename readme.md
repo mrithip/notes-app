@@ -1,5 +1,7 @@
 # Notes App
 
+[![E2E Pipeline](https://github.com/bunnyblack/notesapp/actions/workflows/pipeline.yml/badge.svg)](https://github.com/bunnyblack/notesapp/actions/workflows/pipeline.yml)
+
 A **full-stack Notes App** built with **React** + **Django REST Framework**, using **JWT Authentication**.  
 Users can sign up, log in, add, and delete notes. The admin panel allows managing users and notes.  
 
@@ -114,11 +116,13 @@ This project is licensed under the MIT License.
 
 ---
 
-## Testing
+## Testing Suite
 
-To run the Playwright E2E tests locally:
+This repository includes a comprehensive Playwright + Pytest suite (E2E, API, and Negative testing).
 
-1. Create and activate the virtual environment (if not already done):
+To run the suite locally:
+
+1. Create & activate the virtual environment (if not already done):
     ```bash
     python3 -m venv .venv
     source .venv/bin/activate
@@ -134,9 +138,20 @@ To run the Playwright E2E tests locally:
     playwright install
     ```
 
-4. Make sure both the backend and frontend are running on localhost:8000 and localhost:5173, respectively.
+4. Make sure both the backend and frontend are running on `localhost:8000` and `localhost:5173`, respectively.
 
-5. Run the tests:
+5. Run all tests:
     ```bash
     pytest tests/
     ```
+
+### Specialized Tests & Visual Evidence
+
+- **E2E & API Validation**: UI flows are tested dynamically, and data inserts are directly validated using Python's `sqlite3` to ensure database state sync. Direct API tests bypass the UI entirely and ensure robust backend functionality.
+- **Negative Tests**: Invalid actions (e.g. failing logins) are tested to ensure users receive proper feedback.
+- **"Broken Heart" Resilience Testing**: We simulate catastrophic backend failures (500 Internal Server Error via network interception) on the frontend to guarantee that the UI degrades gracefully, displaying a robust error alert instead of completely crashing the browser tab.
+- **Visual Evidence**: Upon failure, the suite automatically captures screenshots and records a video.
+
+### Test Report & Artifacts
+After running the tests locally, an HTML report, including any failure screenshots and video traces, will be strictly isolated and published into the `/playwright-report` directory. 
+Simply open `playwright-report/report.html` in any browser to review the results.
